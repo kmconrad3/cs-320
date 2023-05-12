@@ -1,0 +1,46 @@
+<html>
+  <head>
+      <title>Taylor Swift Reputation Album Data</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+      function subscribe() {
+        var email = prompt("What is your email?", "????");
+
+        $.post({
+          type: "POST",
+          url: "email",
+          data: email,
+          contentType: "application/text; charset=utf-8",
+          dataType: "json"
+        }).done(function(data) {
+          alert(data);
+        }).fail(function(data) {
+          alert("POST failed");
+        });
+      }
+    </script>
+  </head>
+    
+    <style>
+        .blue{color:green;
+        }
+        .orange{color:orange;
+        }
+    </style> 
+
+  <body>
+    <h1>Welcome!</h1>
+    <ul>
+        <li><a href="browse.html">Browse</a>
+        <li><a class="REPLACECOLOR" href="donate.htmlQUERYSTRING">Donate</a>
+    </ul>
+    <button onclick="subscribe()">Subscribe</button>
+    <p>Enjoy the data.</p> 
+    
+    <img src="dashb1.svg"><br><br>
+    <img src="dashb1_quer.svg?length=min"><br><br> 
+    <img src="dashboard_2.svg"><br><br>
+    
+  </body>
+    
+</html>
